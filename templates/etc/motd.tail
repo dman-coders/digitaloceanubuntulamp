@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------------
+Thank you for using DigitalOcean's LAMP Application.
+Your web root is located at /var/www/html and can be seen from http://162.243.128.186/
+The details of your PHP installation can be seen at http://162.243.128.186/info.php
+Your MySQL root user's password is 2MzK3z03zZ
+You are encouraged to run mysql_secure_installation to ready your server for production.
+-------------------------------------------------------------------------------------
+To delete this message of the day: rm -rf /etc/motd.tail
