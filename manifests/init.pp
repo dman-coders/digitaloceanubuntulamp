@@ -619,10 +619,6 @@ class digitaloceanubuntulamp {
 					ensure => '7.35.0-1ubuntu2';
 				'libdb5.3:amd64':
 					ensure => '5.3.28-3ubuntu3';
-				'libdbd-mysql-perl':
-					ensure => '4.025-1';
-				'libdbi-perl':
-					ensure => '1.630-1';
 				'libdbus-1-3:amd64':
 					ensure => '1.6.18-0ubuntu4.1';
 				'libdbus-glib-1-2:amd64':
@@ -693,8 +689,6 @@ class digitaloceanubuntulamp {
 					ensure => '1.6~git20131207+dfsg-1ubuntu1';
 				'libheimntlm0-heimdal:amd64':
 					ensure => '1.6~git20131207+dfsg-1ubuntu1';
-				'libhtml-template-perl':
-					ensure => '2.95-1';
 				'libhx509-5-heimdal:amd64':
 					ensure => '1.6~git20131207+dfsg-1ubuntu1';
 				'libidn11:amd64':
@@ -859,8 +853,6 @@ class digitaloceanubuntulamp {
 					ensure => '204-5ubuntu20.3';
 				'libtasn1-6:amd64':
 					ensure => '3.4-3ubuntu0.1';
-				'libterm-readkey-perl':
-					ensure => '2.31-1';
 				'libtiff5:amd64':
 					ensure => '4.0.3-7ubuntu0.1';
 				'libtinfo5:amd64':
@@ -913,17 +905,7 @@ class digitaloceanubuntulamp {
 					ensure => '3.13.0-24.47';
 				'memtest86+':
 					ensure => '4.20-1.1ubuntu8';
-				'mysql-client-5.5':
-					ensure => '5.5.38-0ubuntu0.14.04.1';
-				'mysql-client-core-5.5':
-					ensure => '5.5.38-0ubuntu0.14.04.1';
-				'mysql-common':
-					ensure => '5.5.38-0ubuntu0.14.04.1';
 				'mysql-server':
-					ensure => '5.5.38-0ubuntu0.14.04.1';
-				'mysql-server-5.5':
-					ensure => '5.5.38-0ubuntu0.14.04.1';
-				'mysql-server-core-5.5':
 					ensure => '5.5.38-0ubuntu0.14.04.1';
 				'openssh-server':
 					ensure => '1:6.6p1-2ubuntu2';
@@ -968,30 +950,19 @@ class digitaloceanubuntulamp {
 	include packages
 	class services {
 		class sysvinit {
-			service {
-				'mysql':
-					enable    => true,
-					ensure    => running,
-					subscribe => [File['/etc/mysql/debian.cnf'], Package['mysql-server-5.5']];
-				'ssh':
-					enable    => true,
-					ensure    => running,
-					subscribe => [File['/etc/default/keyboard'], File['/etc/default/ntfs-3g'], File['/etc/network/if-up.d/wpasupplicant'], File['/etc/pam.d/common-session-noninteractive'], File['/etc/default/console-setup'], File['/etc/pam.d/common-auth'], File['/etc/pam.d/common-session'], File['/etc/default/grub'], Package['openssh-server'], Exec['99628065e99358ccf4e37e3c463d42ef47604b07.tar']];
+			service { 'ssh':
+				enable    => true,
+				ensure    => running,
+				subscribe => [File['/etc/default/keyboard'], File['/etc/default/ntfs-3g'], File['/etc/network/if-up.d/wpasupplicant'], File['/etc/pam.d/common-session-noninteractive'], File['/etc/default/console-setup'], File['/etc/pam.d/common-auth'], File['/etc/pam.d/common-session'], File['/etc/default/grub'], Package['openssh-server'], Exec['99628065e99358ccf4e37e3c463d42ef47604b07.tar']],
 			}
 		}
 		include sysvinit
 		class upstart {
-			service {
-				'mysql':
-					enable    => true,
-					ensure    => running,
-					provider  => upstart,
-					subscribe => [File['/etc/mysql/debian.cnf'], Package['mysql-server-5.5']];
-				'ssh':
-					enable    => true,
-					ensure    => running,
-					provider  => upstart,
-					subscribe => [File['/etc/default/keyboard'], File['/etc/default/ntfs-3g'], File['/etc/network/if-up.d/wpasupplicant'], File['/etc/pam.d/common-session-noninteractive'], File['/etc/default/console-setup'], File['/etc/pam.d/common-auth'], File['/etc/pam.d/common-session'], File['/etc/default/grub'], Package['openssh-server'], Exec['99628065e99358ccf4e37e3c463d42ef47604b07.tar']];
+			service { 'ssh':
+				enable    => true,
+				ensure    => running,
+				provider  => upstart,
+				subscribe => [File['/etc/default/keyboard'], File['/etc/default/ntfs-3g'], File['/etc/network/if-up.d/wpasupplicant'], File['/etc/pam.d/common-session-noninteractive'], File['/etc/default/console-setup'], File['/etc/pam.d/common-auth'], File['/etc/pam.d/common-session'], File['/etc/default/grub'], Package['openssh-server'], Exec['99628065e99358ccf4e37e3c463d42ef47604b07.tar']],
 			}
 		}
 		include upstart
