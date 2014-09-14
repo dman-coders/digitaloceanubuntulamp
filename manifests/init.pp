@@ -146,6 +146,12 @@ class digitaloceanubuntulamp {
 				group   => root,
 				mode    => 0644,
 				owner   => root;
+			'/etc/blueprintignore':
+				content => template('digitaloceanubuntulamp/etc/blueprintignore'),
+				ensure  => file,
+				group   => root,
+				mode    => 0644,
+				owner   => root;
 			'/etc/default':
 				ensure => directory;
 			'/etc/default/console-setup':
@@ -214,14 +220,6 @@ class digitaloceanubuntulamp {
 				group   => root,
 				mode    => 0644,
 				owner   => root;
-			'/etc/kernel':
-				ensure => directory;
-			'/etc/kernel/postinst.d':
-				ensure => directory;
-			'/etc/kernel/postinst.d/update-notifier':
-				ensure => '/usr/share/update-notifier/notify-reboot-required',
-				group  => root,
-				owner  => root;
 			'/etc/motd.tail':
 				content => template('digitaloceanubuntulamp/etc/motd.tail'),
 				ensure  => file,
@@ -510,10 +508,6 @@ class digitaloceanubuntulamp {
 				owner  => root;
 			'/etc/update-motd.d':
 				ensure => directory;
-			'/etc/update-motd.d/50-landscape-sysinfo':
-				ensure => '/usr/share/landscape/landscape-sysinfo.wrapper',
-				group  => root,
-				owner  => root;
 			'/etc/update-motd.d/99-footer':
 				content => template('digitaloceanubuntulamp/etc/update-motd.d/99-footer'),
 				ensure  => file,
@@ -537,30 +531,12 @@ class digitaloceanubuntulamp {
 		}
 		class apt {
 			package {
-				'acpid':
-					ensure => '1:2.0.21-1ubuntu2';
-				'apache2':
-					ensure => '2.4.7-1ubuntu4.1';
-				'apache2-bin':
-					ensure => '2.4.7-1ubuntu4.1';
-				'apache2-data':
-					ensure => '2.4.7-1ubuntu4.1';
-				'apport':
-					ensure => '2.14.1-0ubuntu3.2';
-				'apport-symptoms':
-					ensure => '0.20';
 				'arping':
 					ensure => '2.11-1';
 				'biosdevname':
 					ensure => '0.4.1-0ubuntu6.1';
 				'byobu':
 					ensure => '5.77-0ubuntu1';
-				'cpp':
-					ensure => '4:4.8.2-1ubuntu6';
-				'cpp-4.8':
-					ensure => '4.8.2-19ubuntu1';
-				'crda':
-					ensure => '1.1.2-1ubuntu2';
 				'curl':
 					ensure => '7.35.0-1ubuntu2';
 				'e2fslibs:amd64':
@@ -585,8 +561,6 @@ class digitaloceanubuntulamp {
 					ensure => '1:1.9.1-1';
 				'git-man':
 					ensure => '1:1.9.1-1';
-				'landscape-common':
-					ensure => '14.01-0ubuntu3';
 				'libaccountsservice0:amd64':
 					ensure => '0.6.35-0ubuntu7.1';
 				'libacl1:amd64':
@@ -595,8 +569,6 @@ class digitaloceanubuntulamp {
 					ensure => '0.3.109-4';
 				'libapache2-mod-auth-mysql':
 					ensure => '4.3.9-13.1ubuntu3';
-				'libapache2-mod-php5':
-					ensure => '5.5.9+dfsg-1ubuntu4.3';
 				'libapparmor1:amd64':
 					ensure => '2.8.95~2430-0ubuntu5';
 				'libapr1:amd64':
@@ -619,8 +591,6 @@ class digitaloceanubuntulamp {
 					ensure => '1:2.4.47-1ubuntu1';
 				'libaudit1:amd64':
 					ensure => '1:2.3.2-2ubuntu1';
-				'libblas3':
-					ensure => '1.2.20110419-7';
 				'libblkid1:amd64':
 					ensure => '2.20.1-5.1ubuntu20.1';
 				'libboost-iostreams1.54.0:amd64':
@@ -757,10 +727,6 @@ class digitaloceanubuntulamp {
 					ensure => '1.12+dfsg-2ubuntu4';
 				'libldap-2.4-2:amd64':
 					ensure => '2.4.31-1+nmu2ubuntu8';
-				'liblinear-tools':
-					ensure => '1.8+dfsg-1ubuntu1';
-				'liblinear1':
-					ensure => '1.8+dfsg-1ubuntu1';
 				'liblockfile1:amd64':
 					ensure => '1.09-6ubuntu1';
 				'liblua5.2-0:amd64':
@@ -913,8 +879,6 @@ class digitaloceanubuntulamp {
 					ensure => '1.3.0-2';
 				'libwind0-heimdal:amd64':
 					ensure => '1.6~git20131207+dfsg-1ubuntu1';
-				'libwireshark-data':
-					ensure => '1.10.6-1';
 				'libwireshark3:amd64':
 					ensure => '1.10.6-1';
 				'libwiretap3:amd64':
@@ -939,30 +903,14 @@ class digitaloceanubuntulamp {
 					ensure => '2:1.1.1-1';
 				'libxpm4:amd64':
 					ensure => '1:3.5.10-1';
-				'linux-firmware':
-					ensure => '1.127.5';
-				'linux-generic':
-					ensure => '3.13.0.32.38';
 				'linux-headers-3.13.0-24':
 					ensure => '3.13.0-24.47';
 				'linux-headers-3.13.0-24-generic':
 					ensure => '3.13.0-24.47';
-				'linux-headers-3.13.0-32':
-					ensure => '3.13.0-32.57';
-				'linux-headers-3.13.0-32-generic':
-					ensure => '3.13.0-32.57';
-				'linux-headers-generic':
-					ensure => '3.13.0.32.38';
 				'linux-image-3.13.0-24-generic':
 					ensure => '3.13.0-24.47';
-				'linux-image-3.13.0-32-generic':
-					ensure => '3.13.0-32.57';
 				'linux-image-extra-3.13.0-24-generic':
 					ensure => '3.13.0-24.47';
-				'linux-image-extra-3.13.0-32-generic':
-					ensure => '3.13.0-32.57';
-				'linux-image-generic':
-					ensure => '3.13.0.32.38';
 				'memtest86+':
 					ensure => '4.20-1.1ubuntu8';
 				'mysql-client-5.5':
@@ -977,60 +925,22 @@ class digitaloceanubuntulamp {
 					ensure => '5.5.38-0ubuntu0.14.04.1';
 				'mysql-server-core-5.5':
 					ensure => '5.5.38-0ubuntu0.14.04.1';
-				'nmap':
-					ensure => '6.40-0.2ubuntu1';
 				'openssh-server':
 					ensure => '1:6.6p1-2ubuntu2';
 				'openssh-sftp-server':
 					ensure => '1:6.6p1-2ubuntu2';
 				'php5':
 					ensure => '5.5.9+dfsg-1ubuntu4.3';
-				'php5-cli':
-					ensure => '5.5.9+dfsg-1ubuntu4.3';
-				'php5-common':
-					ensure => '5.5.9+dfsg-1ubuntu4.3';
 				'php5-gd':
 					ensure => '5.5.9+dfsg-1ubuntu4.3';
-				'php5-json':
-					ensure => '1.3.2-2build1';
 				'php5-mcrypt':
 					ensure => '5.4.6-0ubuntu5';
 				'php5-mysql':
 					ensure => '5.5.9+dfsg-1ubuntu4.3';
-				'php5-readline':
-					ensure => '5.5.9+dfsg-1ubuntu4.3';
-				'policykit-1':
-					ensure => '0.105-4ubuntu2';
-				'python-configobj':
-					ensure => '4.7.2+ds-5build1';
-				'python-gdbm':
-					ensure => '2.7.5-1ubuntu1';
-				'python-openssl':
-					ensure => '0.13-2ubuntu6';
-				'python-pam':
-					ensure => '0.4.2-13.1ubuntu3';
-				'python-pkg-resources':
-					ensure => '3.3-1ubuntu1';
-				'python-requests':
-					ensure => '2.2.1-1';
-				'python-serial':
-					ensure => '2.6-1build1';
-				'python-twisted-bin':
-					ensure => '13.2.0-1ubuntu1';
-				'python-twisted-core':
-					ensure => '13.2.0-1ubuntu1';
-				'python-urllib3':
-					ensure => '1.7.1-1build1';
-				'python-zope.interface':
-					ensure => '4.0.5-1ubuntu4';
-				'python3-apport':
-					ensure => '2.14.1-0ubuntu3.2';
 				'python3-gdbm:amd64':
 					ensure => '3.4.0-0ubuntu1';
 				'python3-newt':
 					ensure => '0.52.15-2ubuntu5';
-				'python3-problem-report':
-					ensure => '2.14.1-0ubuntu3.2';
 				'python3-pycurl':
 					ensure => '7.19.3-0ubuntu3';
 				'python3-software-properties':
@@ -1041,24 +951,12 @@ class digitaloceanubuntulamp {
 					ensure => '4.1.0~20120320gitdb59704-9';
 				'software-properties-common':
 					ensure => '0.92.37.1';
-				'ssh-import-id':
-					ensure => '3.21-0ubuntu1';
-				'ssl-cert':
-					ensure => '1.0.33';
 				'tmux':
 					ensure => '1.8-5';
-				'tshark':
-					ensure => '1.10.6-1';
 				'unattended-upgrades':
 					ensure => '0.82.1ubuntu2';
-				'update-notifier-common':
-					ensure => '0.154.1';
-				'wireless-regdb':
-					ensure => '2013.02.13-1ubuntu1';
 				'wireless-tools':
 					ensure => '30~pre9-8ubuntu1';
-				'wireshark-common':
-					ensure => '1.10.6-1';
 				'wpasupplicant':
 					ensure => '2.1-0ubuntu1';
 				'zlib1g:amd64':
@@ -1071,26 +969,10 @@ class digitaloceanubuntulamp {
 	class services {
 		class sysvinit {
 			service {
-				'acpid':
-					enable    => true,
-					ensure    => running,
-					subscribe => [File['/etc/default/keyboard'], File['/etc/default/ntfs-3g'], File['/etc/default/console-setup'], File['/etc/systemd/system/syslog.service'], File['/etc/systemd/system/sockets.target.wants/acpid.socket'], File['/etc/default/grub'], Package['acpid'], Exec['99628065e99358ccf4e37e3c463d42ef47604b07.tar']];
-				'apache2':
-					enable    => true,
-					ensure    => running,
-					subscribe => [File['/etc/apache2/mods-enabled/autoindex.load'], File['/etc/default/console-setup'], File['/etc/apache2/mods-enabled/authn_core.load'], File['/etc/apache2/mods-enabled/authz_host.load'], File['/etc/apache2/conf-enabled/charset.conf'], File['/etc/apache2/conf-enabled/serve-cgi-bin.conf'], File['/etc/apache2/mods-available/dir.conf'], File['/etc/apache2/mods-enabled/authz_user.load'], File['/etc/apache2/mods-enabled/auth_basic.load'], File['/etc/apache2/conf-enabled/security.conf'], File['/etc/apache2/mods-enabled/autoindex.conf'], File['/etc/apache2/sites-enabled/000-default.conf'], File['/etc/apache2/conf-enabled/other-vhosts-access-log.conf'], File['/etc/default/keyboard'], File['/etc/apache2/mods-enabled/env.load'], File['/etc/apache2/mods-enabled/authz_core.load'], File['/etc/default/grub'], File['/etc/default/ntfs-3g'], File['/etc/apache2/conf-enabled/localized-error-pages.conf'], File['/etc/apache2/mods-enabled/access_compat.load'], File['/etc/apache2/mods-enabled/filter.load'], File['/etc/apache2/mods-enabled/authn_file.load'], Package['apache2'], Exec['99628065e99358ccf4e37e3c463d42ef47604b07.tar']];
-				'apport':
-					enable    => true,
-					ensure    => running,
-					subscribe => [File['/etc/default/keyboard'], File['/etc/default/console-setup'], File['/etc/default/ntfs-3g'], File['/etc/default/grub'], Package['apport'], Exec['99628065e99358ccf4e37e3c463d42ef47604b07.tar']];
 				'mysql':
 					enable    => true,
 					ensure    => running,
 					subscribe => [File['/etc/mysql/debian.cnf'], Package['mysql-server-5.5']];
-				'rc.digitalocean':
-					enable    => true,
-					ensure    => running,
-					subscribe => File['/etc/rc.digitalocean'];
 				'ssh':
 					enable    => true,
 					ensure    => running,
@@ -1100,16 +982,6 @@ class digitaloceanubuntulamp {
 		include sysvinit
 		class upstart {
 			service {
-				'acpid':
-					enable    => true,
-					ensure    => running,
-					provider  => upstart,
-					subscribe => [File['/etc/default/keyboard'], File['/etc/default/ntfs-3g'], File['/etc/default/console-setup'], File['/etc/systemd/system/syslog.service'], File['/etc/systemd/system/sockets.target.wants/acpid.socket'], File['/etc/default/grub'], Package['acpid'], Exec['99628065e99358ccf4e37e3c463d42ef47604b07.tar']];
-				'apport':
-					enable    => true,
-					ensure    => running,
-					provider  => upstart,
-					subscribe => [File['/etc/default/keyboard'], File['/etc/default/console-setup'], File['/etc/default/ntfs-3g'], File['/etc/default/grub'], Package['apport'], Exec['99628065e99358ccf4e37e3c463d42ef47604b07.tar']];
 				'mysql':
 					enable    => true,
 					ensure    => running,
