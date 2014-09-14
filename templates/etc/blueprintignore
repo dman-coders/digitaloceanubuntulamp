@@ -13,8 +13,8 @@
 !:package:apt/apache2
 :package:apt/php5
 !:package:apt/php5
-:package:apt/php-gd
-!:package:apt/php-gd
+:package:apt/php5-gd
+!:package:apt/php5-gd
 :package:apt/mysql-server
 !:package:apt/mysql-server
 :package:apt/curl
@@ -24,6 +24,8 @@
 :service:sysvinit/acpid
 :service:sysvinit/apport
 :service:sysvinit/rc.digitalocean
+:service:sysvinit/ssh
 :service:upstart/acpid
 :service:upstart/apport
+:service:upstart/ssh
 

@@ -543,10 +543,6 @@ class digitaloceanubuntulamp {
 					ensure => '1.42.9-3ubuntu1';
 				'ethtool':
 					ensure => '1:3.13-1';
-				'fontconfig-config':
-					ensure => '2.11.0-0ubuntu4.1';
-				'fonts-dejavu-core':
-					ensure => '2.34-1ubuntu1';
 				'fonts-ubuntu-font-family-console':
 					ensure => '0.80-0ubuntu6';
 				'gawk':
@@ -948,26 +944,6 @@ class digitaloceanubuntulamp {
 		include apt
 	}
 	include packages
-	class services {
-		class sysvinit {
-			service { 'ssh':
-				enable    => true,
-				ensure    => running,
-				subscribe => [File['/etc/default/keyboard'], File['/etc/default/ntfs-3g'], File['/etc/network/if-up.d/wpasupplicant'], File['/etc/pam.d/common-session-noninteractive'], File['/etc/default/console-setup'], File['/etc/pam.d/common-auth'], File['/etc/pam.d/common-session'], File['/etc/default/grub'], Package['openssh-server'], Exec['99628065e99358ccf4e37e3c463d42ef47604b07.tar']],
-			}
-		}
-		include sysvinit
-		class upstart {
-			service { 'ssh':
-				enable    => true,
-				ensure    => running,
-				provider  => upstart,
-				subscribe => [File['/etc/default/keyboard'], File['/etc/default/ntfs-3g'], File['/etc/network/if-up.d/wpasupplicant'], File['/etc/pam.d/common-session-noninteractive'], File['/etc/default/console-setup'], File['/etc/pam.d/common-auth'], File['/etc/pam.d/common-session'], File['/etc/default/grub'], Package['openssh-server'], Exec['99628065e99358ccf4e37e3c463d42ef47604b07.tar']],
-			}
-		}
-		include upstart
-	}
-	include services
 	class sources {
 		exec { 'tar xf /tmp/99628065e99358ccf4e37e3c463d42ef47604b07.tar':
 			alias => '/usr/local',
