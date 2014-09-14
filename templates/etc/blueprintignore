@@ -29,3 +29,21 @@
 :service:upstart/apport
 :service:upstart/ssh
 
+/etc/*
+!/etc/blueprintignore
+!/etc/apache2/conf-enabled/other-vhosts-access-log.conf
+!/etc/apache2/conf-enabled/other-vhosts-access-log.conf
+!/etc/apt/sources.list
+!/etc/apt/trusted.gpg.d
+!/etc/motd.tail
+!/etc/php5/*/php.ini
+!/etc/ssh/sshd_config
+
+
+
+
+
+
+
+
+

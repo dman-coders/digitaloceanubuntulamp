@@ -10,130 +10,18 @@ class digitaloceanubuntulamp {
 		file {
 			'/etc':
 				ensure => directory;
-			'/etc/X11':
-				ensure => directory;
-			'/etc/X11/Xwrapper.config':
-				content => template('digitaloceanubuntulamp/etc/X11/Xwrapper.config'),
-				ensure  => file,
-				group   => root,
-				mode    => 0644,
-				owner   => root;
 			'/etc/apache2':
 				ensure => directory;
 			'/etc/apache2/conf-enabled':
 				ensure => directory;
-			'/etc/apache2/conf-enabled/charset.conf':
-				ensure => '../conf-available/charset.conf',
-				group  => root,
-				owner  => root;
-			'/etc/apache2/conf-enabled/localized-error-pages.conf':
-				ensure => '../conf-available/localized-error-pages.conf',
-				group  => root,
-				owner  => root;
 			'/etc/apache2/conf-enabled/other-vhosts-access-log.conf':
 				ensure => '../conf-available/other-vhosts-access-log.conf',
 				group  => root,
 				owner  => root;
-			'/etc/apache2/conf-enabled/security.conf':
-				ensure => '../conf-available/security.conf',
-				group  => root,
-				owner  => root;
-			'/etc/apache2/conf-enabled/serve-cgi-bin.conf':
-				ensure => '../conf-available/serve-cgi-bin.conf',
-				group  => root,
-				owner  => root;
-			'/etc/apache2/mods-available':
-				ensure => directory;
-			'/etc/apache2/mods-available/dir.conf':
-				content => template('digitaloceanubuntulamp/etc/apache2/mods-available/dir.conf'),
-				ensure  => file,
-				group   => root,
-				mode    => 0644,
-				owner   => root;
-			'/etc/apache2/mods-enabled':
-				ensure => directory;
-			'/etc/apache2/mods-enabled/access_compat.load':
-				ensure => '../mods-available/access_compat.load',
-				group  => root,
-				owner  => root;
-			'/etc/apache2/mods-enabled/auth_basic.load':
-				ensure => '../mods-available/auth_basic.load',
-				group  => root,
-				owner  => root;
-			'/etc/apache2/mods-enabled/authn_core.load':
-				ensure => '../mods-available/authn_core.load',
-				group  => root,
-				owner  => root;
-			'/etc/apache2/mods-enabled/authn_file.load':
-				ensure => '../mods-available/authn_file.load',
-				group  => root,
-				owner  => root;
-			'/etc/apache2/mods-enabled/authz_core.load':
-				ensure => '../mods-available/authz_core.load',
-				group  => root,
-				owner  => root;
-			'/etc/apache2/mods-enabled/authz_host.load':
-				ensure => '../mods-available/authz_host.load',
-				group  => root,
-				owner  => root;
-			'/etc/apache2/mods-enabled/authz_user.load':
-				ensure => '../mods-available/authz_user.load',
-				group  => root,
-				owner  => root;
-			'/etc/apache2/mods-enabled/autoindex.conf':
-				ensure => '../mods-available/autoindex.conf',
-				group  => root,
-				owner  => root;
-			'/etc/apache2/mods-enabled/autoindex.load':
-				ensure => '../mods-available/autoindex.load',
-				group  => root,
-				owner  => root;
-			'/etc/apache2/mods-enabled/env.load':
-				ensure => '../mods-available/env.load',
-				group  => root,
-				owner  => root;
-			'/etc/apache2/mods-enabled/filter.load':
-				ensure => '../mods-available/filter.load',
-				group  => root,
-				owner  => root;
-			'/etc/apache2/sites-enabled':
-				ensure => directory;
-			'/etc/apache2/sites-enabled/000-default.conf':
-				ensure => '../sites-available/000-default.conf',
-				group  => root,
-				owner  => root;
 			'/etc/apt':
 				ensure => directory;
-			'/etc/apt/apt.conf.d':
-				ensure => directory;
-			'/etc/apt/apt.conf.d/00CDMountPoint':
-				content => template('digitaloceanubuntulamp/etc/apt/apt.conf.d/00CDMountPoint'),
-				ensure  => file,
-				group   => root,
-				mode    => 0644,
-				owner   => root;
-			'/etc/apt/apt.conf.d/00aptitude':
-				content => template('digitaloceanubuntulamp/etc/apt/apt.conf.d/00aptitude'),
-				ensure  => file,
-				group   => root,
-				mode    => 0644,
-				owner   => root;
-			'/etc/apt/apt.conf.d/01autoremove-kernels':
-				content => template('digitaloceanubuntulamp/etc/apt/apt.conf.d/01autoremove-kernels'),
-				ensure  => file,
-				group   => root,
-				mode    => 0644,
-				owner   => root;
 			'/etc/apt/sources.list':
 				content => template('digitaloceanubuntulamp/etc/apt/sources.list'),
-				ensure  => file,
-				group   => root,
-				mode    => 0644,
-				owner   => root;
-			'/etc/apt/sources.list.d':
-				ensure => directory;
-			'/etc/apt/sources.list.d/devstructure.list':
-				content => template('digitaloceanubuntulamp/etc/apt/sources.list.d/devstructure.list'),
 				ensure  => file,
 				group   => root,
 				mode    => 0644,
@@ -152,136 +40,8 @@ class digitaloceanubuntulamp {
 				group   => root,
 				mode    => 0644,
 				owner   => root;
-			'/etc/default':
-				ensure => directory;
-			'/etc/default/console-setup':
-				content => template('digitaloceanubuntulamp/etc/default/console-setup'),
-				ensure  => file,
-				group   => root,
-				mode    => 0644,
-				owner   => root;
-			'/etc/default/grub':
-				content => template('digitaloceanubuntulamp/etc/default/grub'),
-				ensure  => file,
-				group   => root,
-				mode    => 0644,
-				owner   => root;
-			'/etc/default/keyboard':
-				content => template('digitaloceanubuntulamp/etc/default/keyboard'),
-				ensure  => file,
-				group   => root,
-				mode    => 0644,
-				owner   => root;
-			'/etc/default/ntfs-3g':
-				content => template('digitaloceanubuntulamp/etc/default/ntfs-3g'),
-				ensure  => file,
-				group   => root,
-				mode    => 0644,
-				owner   => root;
-			'/etc/hosts':
-				content => template('digitaloceanubuntulamp/etc/hosts'),
-				ensure  => file,
-				group   => root,
-				mode    => 0644,
-				owner   => root;
-			'/etc/hosts.allow':
-				content => template('digitaloceanubuntulamp/etc/hosts.allow'),
-				ensure  => file,
-				group   => root,
-				mode    => 0644,
-				owner   => root;
-			'/etc/hosts.deny':
-				content => template('digitaloceanubuntulamp/etc/hosts.deny'),
-				ensure  => file,
-				group   => root,
-				mode    => 0644,
-				owner   => root;
-			'/etc/ifplugd':
-				ensure => directory;
-			'/etc/ifplugd/action.d':
-				ensure => directory;
-			'/etc/ifplugd/action.d/action_wpa':
-				ensure => '../../wpa_supplicant/action_wpa.sh',
-				group  => root,
-				owner  => root;
-			'/etc/init.d':
-				ensure => directory;
-			'/etc/init.d/rc.digitalocean':
-				content => template('digitaloceanubuntulamp/etc/init.d/rc.digitalocean'),
-				ensure  => file,
-				group   => root,
-				mode    => 0755,
-				owner   => root;
-			'/etc/iscsi':
-				ensure => directory;
-			'/etc/iscsi/iscsid.conf':
-				content => template('digitaloceanubuntulamp/etc/iscsi/iscsid.conf'),
-				ensure  => file,
-				group   => root,
-				mode    => 0644,
-				owner   => root;
 			'/etc/motd.tail':
 				content => template('digitaloceanubuntulamp/etc/motd.tail'),
-				ensure  => file,
-				group   => root,
-				mode    => 0644,
-				owner   => root;
-			'/etc/mysql':
-				ensure => directory;
-			'/etc/mysql/debian.cnf':
-				content => template('digitaloceanubuntulamp/etc/mysql/debian.cnf'),
-				ensure  => file,
-				group   => root,
-				mode    => 0600,
-				owner   => root;
-			'/etc/network':
-				ensure => directory;
-			'/etc/network/if-down.d':
-				ensure => directory;
-			'/etc/network/if-down.d/wpasupplicant':
-				ensure => '../../wpa_supplicant/ifupdown.sh',
-				group  => root,
-				owner  => root;
-			'/etc/network/if-post-down.d':
-				ensure => directory;
-			'/etc/network/if-post-down.d/wpasupplicant':
-				ensure => '../../wpa_supplicant/ifupdown.sh',
-				group  => root,
-				owner  => root;
-			'/etc/network/if-pre-up.d':
-				ensure => directory;
-			'/etc/network/if-pre-up.d/wpasupplicant':
-				ensure => '../../wpa_supplicant/ifupdown.sh',
-				group  => root,
-				owner  => root;
-			'/etc/network/if-up.d':
-				ensure => directory;
-			'/etc/network/if-up.d/wpasupplicant':
-				ensure => '../../wpa_supplicant/ifupdown.sh',
-				group  => root,
-				owner  => root;
-			'/etc/networks':
-				content => template('digitaloceanubuntulamp/etc/networks'),
-				ensure  => file,
-				group   => root,
-				mode    => 0644,
-				owner   => root;
-			'/etc/pam.d':
-				ensure => directory;
-			'/etc/pam.d/common-auth':
-				content => template('digitaloceanubuntulamp/etc/pam.d/common-auth'),
-				ensure  => file,
-				group   => root,
-				mode    => 0644,
-				owner   => root;
-			'/etc/pam.d/common-session':
-				content => template('digitaloceanubuntulamp/etc/pam.d/common-session'),
-				ensure  => file,
-				group   => root,
-				mode    => 0644,
-				owner   => root;
-			'/etc/pam.d/common-session-noninteractive':
-				content => template('digitaloceanubuntulamp/etc/pam.d/common-session-noninteractive'),
 				ensure  => file,
 				group   => root,
 				mode    => 0644,
@@ -290,40 +50,6 @@ class digitaloceanubuntulamp {
 				ensure => directory;
 			'/etc/php5/apache2':
 				ensure => directory;
-			'/etc/php5/apache2/conf.d':
-				ensure => directory;
-			'/etc/php5/apache2/conf.d/05-opcache.ini':
-				ensure => '../../mods-available/opcache.ini',
-				group  => root,
-				owner  => root;
-			'/etc/php5/apache2/conf.d/10-pdo.ini':
-				ensure => '../../mods-available/pdo.ini',
-				group  => root,
-				owner  => root;
-			'/etc/php5/apache2/conf.d/20-gd.ini':
-				ensure => '../../mods-available/gd.ini',
-				group  => root,
-				owner  => root;
-			'/etc/php5/apache2/conf.d/20-json.ini':
-				ensure => '../../mods-available/json.ini',
-				group  => root,
-				owner  => root;
-			'/etc/php5/apache2/conf.d/20-mysql.ini':
-				ensure => '../../mods-available/mysql.ini',
-				group  => root,
-				owner  => root;
-			'/etc/php5/apache2/conf.d/20-mysqli.ini':
-				ensure => '../../mods-available/mysqli.ini',
-				group  => root,
-				owner  => root;
-			'/etc/php5/apache2/conf.d/20-pdo_mysql.ini':
-				ensure => '../../mods-available/pdo_mysql.ini',
-				group  => root,
-				owner  => root;
-			'/etc/php5/apache2/conf.d/20-readline.ini':
-				ensure => '../../mods-available/readline.ini',
-				group  => root,
-				owner  => root;
 			'/etc/php5/apache2/php.ini':
 				content => template('digitaloceanubuntulamp/etc/php5/apache2/php.ini'),
 				ensure  => file,
@@ -332,118 +58,8 @@ class digitaloceanubuntulamp {
 				owner   => root;
 			'/etc/php5/cli':
 				ensure => directory;
-			'/etc/php5/cli/conf.d':
-				ensure => directory;
-			'/etc/php5/cli/conf.d/05-opcache.ini':
-				ensure => '../../mods-available/opcache.ini',
-				group  => root,
-				owner  => root;
-			'/etc/php5/cli/conf.d/10-pdo.ini':
-				ensure => '../../mods-available/pdo.ini',
-				group  => root,
-				owner  => root;
-			'/etc/php5/cli/conf.d/20-gd.ini':
-				ensure => '../../mods-available/gd.ini',
-				group  => root,
-				owner  => root;
-			'/etc/php5/cli/conf.d/20-json.ini':
-				ensure => '../../mods-available/json.ini',
-				group  => root,
-				owner  => root;
-			'/etc/php5/cli/conf.d/20-mysql.ini':
-				ensure => '../../mods-available/mysql.ini',
-				group  => root,
-				owner  => root;
-			'/etc/php5/cli/conf.d/20-mysqli.ini':
-				ensure => '../../mods-available/mysqli.ini',
-				group  => root,
-				owner  => root;
-			'/etc/php5/cli/conf.d/20-pdo_mysql.ini':
-				ensure => '../../mods-available/pdo_mysql.ini',
-				group  => root,
-				owner  => root;
-			'/etc/php5/cli/conf.d/20-readline.ini':
-				ensure => '../../mods-available/readline.ini',
-				group  => root,
-				owner  => root;
 			'/etc/php5/cli/php.ini':
 				content => template('digitaloceanubuntulamp/etc/php5/cli/php.ini'),
-				ensure  => file,
-				group   => root,
-				mode    => 0644,
-				owner   => root;
-			'/etc/php5/mods-available':
-				ensure => directory;
-			'/etc/php5/mods-available/gd.ini':
-				content => template('digitaloceanubuntulamp/etc/php5/mods-available/gd.ini'),
-				ensure  => file,
-				group   => root,
-				mode    => 0644,
-				owner   => root;
-			'/etc/php5/mods-available/mysql.ini':
-				content => template('digitaloceanubuntulamp/etc/php5/mods-available/mysql.ini'),
-				ensure  => file,
-				group   => root,
-				mode    => 0644,
-				owner   => root;
-			'/etc/php5/mods-available/mysqli.ini':
-				content => template('digitaloceanubuntulamp/etc/php5/mods-available/mysqli.ini'),
-				ensure  => file,
-				group   => root,
-				mode    => 0644,
-				owner   => root;
-			'/etc/php5/mods-available/opcache.ini':
-				content => template('digitaloceanubuntulamp/etc/php5/mods-available/opcache.ini'),
-				ensure  => file,
-				group   => root,
-				mode    => 0644,
-				owner   => root;
-			'/etc/php5/mods-available/pdo.ini':
-				content => template('digitaloceanubuntulamp/etc/php5/mods-available/pdo.ini'),
-				ensure  => file,
-				group   => root,
-				mode    => 0644,
-				owner   => root;
-			'/etc/php5/mods-available/pdo_mysql.ini':
-				content => template('digitaloceanubuntulamp/etc/php5/mods-available/pdo_mysql.ini'),
-				ensure  => file,
-				group   => root,
-				mode    => 0644,
-				owner   => root;
-			'/etc/php5/mods-available/readline.ini':
-				content => template('digitaloceanubuntulamp/etc/php5/mods-available/readline.ini'),
-				ensure  => file,
-				group   => root,
-				mode    => 0644,
-				owner   => root;
-			'/etc/python3':
-				ensure => directory;
-			'/etc/python3/debian_config':
-				content => template('digitaloceanubuntulamp/etc/python3/debian_config'),
-				ensure  => file,
-				group   => root,
-				mode    => 0644,
-				owner   => root;
-			'/etc/rc.digitalocean':
-				content => template('digitaloceanubuntulamp/etc/rc.digitalocean'),
-				ensure  => file,
-				group   => root,
-				mode    => 0755,
-				owner   => root;
-			'/etc/rc.local':
-				content => template('digitaloceanubuntulamp/etc/rc.local'),
-				ensure  => file,
-				group   => root,
-				mode    => 0755,
-				owner   => root;
-			'/etc/sgml':
-				ensure => directory;
-			'/etc/sgml/catalog':
-				ensure => '/var/lib/sgml-base/supercatalog',
-				group  => root,
-				owner  => root;
-			'/etc/shells':
-				content => template('digitaloceanubuntulamp/etc/shells'),
 				ensure  => file,
 				group   => root,
 				mode    => 0644,
@@ -452,72 +68,6 @@ class digitaloceanubuntulamp {
 				ensure => directory;
 			'/etc/ssh/sshd_config':
 				content => template('digitaloceanubuntulamp/etc/ssh/sshd_config'),
-				ensure  => file,
-				group   => root,
-				mode    => 0644,
-				owner   => root;
-			'/etc/ssl':
-				ensure => directory;
-			'/etc/ssl/private':
-				ensure => directory;
-			'/etc/ssl/private/ssl-cert-snakeoil.key':
-				content => template('digitaloceanubuntulamp/etc/ssl/private/ssl-cert-snakeoil.key'),
-				ensure  => file,
-				group   => 'ssl-cert',
-				mode    => 0640,
-				owner   => root;
-			'/etc/subgid':
-				content => template('digitaloceanubuntulamp/etc/subgid'),
-				ensure  => file,
-				group   => root,
-				mode    => 0644,
-				owner   => root;
-			'/etc/subuid':
-				content => template('digitaloceanubuntulamp/etc/subuid'),
-				ensure  => file,
-				group   => root,
-				mode    => 0644,
-				owner   => root;
-			'/etc/systemd':
-				ensure => directory;
-			'/etc/systemd/system':
-				ensure => directory;
-			'/etc/systemd/system/multi-user.target.wants':
-				ensure => directory;
-			'/etc/systemd/system/multi-user.target.wants/atd.service':
-				ensure => '/lib/systemd/system/atd.service',
-				group  => root,
-				owner  => root;
-			'/etc/systemd/system/multi-user.target.wants/rsyslog.service':
-				ensure => '/lib/systemd/system/rsyslog.service',
-				group  => root,
-				owner  => root;
-			'/etc/systemd/system/multi-user.target.wants/ssh.service':
-				ensure => '/lib/systemd/system/ssh.service',
-				group  => root,
-				owner  => root;
-			'/etc/systemd/system/sockets.target.wants':
-				ensure => directory;
-			'/etc/systemd/system/sockets.target.wants/acpid.socket':
-				ensure => '/lib/systemd/system/acpid.socket',
-				group  => root,
-				owner  => root;
-			'/etc/systemd/system/syslog.service':
-				ensure => '/lib/systemd/system/rsyslog.service',
-				group  => root,
-				owner  => root;
-			'/etc/update-motd.d':
-				ensure => directory;
-			'/etc/update-motd.d/99-footer':
-				content => template('digitaloceanubuntulamp/etc/update-motd.d/99-footer'),
-				ensure  => file,
-				group   => root,
-				mode    => 0755,
-				owner   => root;
-			'/etc/update-notifier':
-				ensure => directory;
-			'/etc/update-notifier/hooks_seen':
-				content => template('digitaloceanubuntulamp/etc/update-notifier/hooks_seen'),
 				ensure  => file,
 				group   => root,
 				mode    => 0644,
