@@ -1,0 +1,14 @@
+{
+  "name": "dman-digitaloceanubuntulamp",
+  "version": "0.1.0",
+  "author": "dman",
+  "summary": "Rebuild a server similar to the DigitalOcean default LAMP stack",
+  "license": "GPL",
+  "source": "https://github.com/dman-coders/digitaloceanubuntulamp.git",
+  "project_page": "https://github.com/dman-coders/digitaloceanubuntulamp",
+  "issues_url": "https://github.com/dman-coders/digitaloceanubuntulamp/issues",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+  ]
+}
+
