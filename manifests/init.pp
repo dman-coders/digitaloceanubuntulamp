@@ -82,413 +82,413 @@ class digitaloceanubuntulamp {
 		class apt {
 			package {
 				'arping':
-					ensure => '2.11-1';
+					ensure => installed;
 				'biosdevname':
-					ensure => '0.4.1-0ubuntu6.1';
+					ensure => installed;
 				'byobu':
-					ensure => '5.77-0ubuntu1';
+					ensure => installed;
 				'curl':
-					ensure => '7.35.0-1ubuntu2';
+					ensure => installed;
 				'e2fslibs:amd64':
-					ensure => '1.42.9-3ubuntu1';
+					ensure => installed;
 				'ethtool':
-					ensure => '1:3.13-1';
+					ensure => installed;
 				'fonts-ubuntu-font-family-console':
-					ensure => '0.80-0ubuntu6';
+					ensure => installed;
 				'gawk':
-					ensure => '1:4.0.1+dfsg-2.1ubuntu2';
+					ensure => installed;
 				'gcc-4.8-base:amd64':
-					ensure => '4.8.2-19ubuntu1';
+					ensure => installed;
 				'gcc-4.9-base:amd64':
-					ensure => '4.9-20140406-0ubuntu1';
+					ensure => installed;
 				'git':
-					ensure => '1:1.9.1-1';
+					ensure => installed;
 				'git-core':
-					ensure => '1:1.9.1-1';
+					ensure => installed;
 				'git-man':
-					ensure => '1:1.9.1-1';
+					ensure => installed;
 				'libaccountsservice0:amd64':
-					ensure => '0.6.35-0ubuntu7.1';
+					ensure => installed;
 				'libacl1:amd64':
-					ensure => '2.2.52-1';
+					ensure => installed;
 				'libaio1:amd64':
-					ensure => '0.3.109-4';
+					ensure => installed;
 				'libapache2-mod-auth-mysql':
-					ensure => '4.3.9-13.1ubuntu3';
+					ensure => installed;
 				'libapparmor1:amd64':
-					ensure => '2.8.95~2430-0ubuntu5';
+					ensure => installed;
 				'libapr1:amd64':
-					ensure => '1.5.0-1';
+					ensure => installed;
 				'libaprutil1-dbd-sqlite3:amd64':
-					ensure => '1.5.3-1';
+					ensure => installed;
 				'libaprutil1-ldap:amd64':
-					ensure => '1.5.3-1';
+					ensure => installed;
 				'libaprutil1:amd64':
-					ensure => '1.5.3-1';
+					ensure => installed;
 				'libapt-inst1.5:amd64':
-					ensure => '1.0.1ubuntu2.1';
+					ensure => installed;
 				'libapt-pkg4.12:amd64':
-					ensure => '1.0.1ubuntu2.1';
+					ensure => installed;
 				'libasn1-8-heimdal:amd64':
-					ensure => '1.6~git20131207+dfsg-1ubuntu1';
+					ensure => installed;
 				'libasprintf0c2:amd64':
-					ensure => '0.18.3.1-1ubuntu3';
+					ensure => installed;
 				'libattr1:amd64':
-					ensure => '1:2.4.47-1ubuntu1';
+					ensure => installed;
 				'libaudit1:amd64':
-					ensure => '1:2.3.2-2ubuntu1';
+					ensure => installed;
 				'libblkid1:amd64':
-					ensure => '2.20.1-5.1ubuntu20.1';
+					ensure => installed;
 				'libboost-iostreams1.54.0:amd64':
-					ensure => '1.54.0-4ubuntu3.1';
+					ensure => installed;
 				'libbsd0:amd64':
-					ensure => '0.6.0-2ubuntu1';
+					ensure => installed;
 				'libbz2-1.0:amd64':
-					ensure => '1.0.6-5';
+					ensure => installed;
 				'libc-ares2:amd64':
-					ensure => '1.10.0-2';
+					ensure => installed;
 				'libc6:amd64':
-					ensure => '2.19-0ubuntu6.1';
+					ensure => installed;
 				'libcap2:amd64':
-					ensure => '1:2.24-0ubuntu2';
+					ensure => installed;
 				'libcgmanager0:amd64':
-					ensure => '0.24-0ubuntu7';
+					ensure => installed;
 				'libck-connector0:amd64':
-					ensure => '0.4.5-3.1ubuntu2';
+					ensure => installed;
 				'libcloog-isl4:amd64':
-					ensure => '0.18.2-1';
+					ensure => installed;
 				'libcomerr2:amd64':
-					ensure => '1.42.9-3ubuntu1';
+					ensure => installed;
 				'libcurl3-gnutls:amd64':
-					ensure => '7.35.0-1ubuntu2';
+					ensure => installed;
 				'libcurl3:amd64':
-					ensure => '7.35.0-1ubuntu2';
+					ensure => installed;
 				'libdb5.3:amd64':
-					ensure => '5.3.28-3ubuntu3';
+					ensure => installed;
 				'libdbus-1-3:amd64':
-					ensure => '1.6.18-0ubuntu4.1';
+					ensure => installed;
 				'libdbus-glib-1-2:amd64':
-					ensure => '0.100.2-1';
+					ensure => installed;
 				'libdebconfclient0:amd64':
-					ensure => '0.187ubuntu1';
+					ensure => installed;
 				'libdevmapper1.02.1:amd64':
-					ensure => '2:1.02.77-6ubuntu2';
+					ensure => installed;
 				'libdrm2:amd64':
-					ensure => '2.4.52-1';
+					ensure => installed;
 				'libedit2:amd64':
-					ensure => '3.1-20130712-2';
+					ensure => installed;
 				'libelf1:amd64':
-					ensure => '0.158-0ubuntu5.1';
+					ensure => installed;
 				'libept1.4.12:amd64':
-					ensure => '1.0.12';
+					ensure => installed;
 				'liberror-perl':
-					ensure => '0.17-1.1';
+					ensure => installed;
 				'libevent-2.0-5:amd64':
-					ensure => '2.0.21-stable-1ubuntu1';
+					ensure => installed;
 				'libexpat1:amd64':
-					ensure => '2.1.0-4ubuntu1';
+					ensure => installed;
 				'libffi6:amd64':
-					ensure => '3.1~rc1+r3.0.13-12';
+					ensure => installed;
 				'libfontconfig1:amd64':
-					ensure => '2.11.0-0ubuntu4.1';
+					ensure => installed;
 				'libfreetype6:amd64':
-					ensure => '2.5.2-1ubuntu2.2';
+					ensure => installed;
 				'libfribidi0:amd64':
-					ensure => '0.19.6-1';
+					ensure => installed;
 				'libfuse2:amd64':
-					ensure => '2.9.2-4ubuntu4';
+					ensure => installed;
 				'libgc1c2:amd64':
-					ensure => '1:7.2d-5ubuntu2';
+					ensure => installed;
 				'libgcc1:amd64':
-					ensure => '1:4.9-20140406-0ubuntu1';
+					ensure => installed;
 				'libgck-1-0:amd64':
-					ensure => '3.10.1-1';
+					ensure => installed;
 				'libgcr-base-3-1:amd64':
-					ensure => '3.10.1-1';
+					ensure => installed;
 				'libgcrypt11:amd64':
-					ensure => '1.5.3-2ubuntu4';
+					ensure => installed;
 				'libgd3:amd64':
-					ensure => '2.1.0-3';
+					ensure => installed;
 				'libgdbm3:amd64':
-					ensure => '1.8.3-12build1';
+					ensure => installed;
 				'libgeoip1:amd64':
-					ensure => '1.6.0-1';
+					ensure => installed;
 				'libglib2.0-0:amd64':
-					ensure => '2.40.0-2';
+					ensure => installed;
 				'libgmp10:amd64':
-					ensure => '2:5.1.3+dfsg-1ubuntu1';
+					ensure => installed;
 				'libgnutls-openssl27:amd64':
-					ensure => '2.12.23-12ubuntu2.1';
+					ensure => installed;
 				'libgnutls26:amd64':
-					ensure => '2.12.23-12ubuntu2.1';
+					ensure => installed;
 				'libgpg-error0:amd64':
-					ensure => '1.12-0.2ubuntu1';
+					ensure => installed;
 				'libgpm2:amd64':
-					ensure => '1.20.4-6.1';
+					ensure => installed;
 				'libgssapi-krb5-2:amd64':
-					ensure => '1.12+dfsg-2ubuntu4';
+					ensure => installed;
 				'libgssapi3-heimdal:amd64':
-					ensure => '1.6~git20131207+dfsg-1ubuntu1';
+					ensure => installed;
 				'libhcrypto4-heimdal:amd64':
-					ensure => '1.6~git20131207+dfsg-1ubuntu1';
+					ensure => installed;
 				'libheimbase1-heimdal:amd64':
-					ensure => '1.6~git20131207+dfsg-1ubuntu1';
+					ensure => installed;
 				'libheimntlm0-heimdal:amd64':
-					ensure => '1.6~git20131207+dfsg-1ubuntu1';
+					ensure => installed;
 				'libhx509-5-heimdal:amd64':
-					ensure => '1.6~git20131207+dfsg-1ubuntu1';
+					ensure => installed;
 				'libidn11:amd64':
-					ensure => '1.28-1ubuntu2';
+					ensure => installed;
 				'libisl10:amd64':
-					ensure => '0.12.2-1';
+					ensure => installed;
 				'libiw30:amd64':
-					ensure => '30~pre9-8ubuntu1';
+					ensure => installed;
 				'libjbig0:amd64':
-					ensure => '2.0-2ubuntu4.1';
+					ensure => installed;
 				'libjpeg-turbo8:amd64':
-					ensure => '1.3.0-0ubuntu2';
+					ensure => installed;
 				'libjpeg8:amd64':
-					ensure => '8c-2ubuntu8';
+					ensure => installed;
 				'libjson-c2:amd64':
-					ensure => '0.11-3ubuntu1.2';
+					ensure => installed;
 				'libjson0:amd64':
-					ensure => '0.11-3ubuntu1.2';
+					ensure => installed;
 				'libk5crypto3:amd64':
-					ensure => '1.12+dfsg-2ubuntu4';
+					ensure => installed;
 				'libkeyutils1:amd64':
-					ensure => '1.5.6-1';
+					ensure => installed;
 				'libkmod2:amd64':
-					ensure => '15-0ubuntu6';
+					ensure => installed;
 				'libkrb5-26-heimdal:amd64':
-					ensure => '1.6~git20131207+dfsg-1ubuntu1';
+					ensure => installed;
 				'libkrb5-3:amd64':
-					ensure => '1.12+dfsg-2ubuntu4';
+					ensure => installed;
 				'libkrb5support0:amd64':
-					ensure => '1.12+dfsg-2ubuntu4';
+					ensure => installed;
 				'libldap-2.4-2:amd64':
-					ensure => '2.4.31-1+nmu2ubuntu8';
+					ensure => installed;
 				'liblockfile1:amd64':
-					ensure => '1.09-6ubuntu1';
+					ensure => installed;
 				'liblua5.2-0:amd64':
-					ensure => '5.2.3-1';
+					ensure => installed;
 				'liblzma5:amd64':
-					ensure => '5.1.1alpha+20120614-2ubuntu2';
+					ensure => installed;
 				'libmagic1:amd64':
-					ensure => '1:5.14-2ubuntu3.1';
+					ensure => installed;
 				'libmcrypt4':
-					ensure => '2.5.8-3.1ubuntu1';
+					ensure => installed;
 				'libmount1:amd64':
-					ensure => '2.20.1-5.1ubuntu20.1';
+					ensure => installed;
 				'libmpc3:amd64':
-					ensure => '1.0.1-1ubuntu1';
+					ensure => installed;
 				'libmpdec2:amd64':
-					ensure => '2.4.0-6';
+					ensure => installed;
 				'libmpfr4:amd64':
-					ensure => '3.1.2-1';
+					ensure => installed;
 				'libmysqlclient18:amd64':
-					ensure => '5.5.38-0ubuntu0.14.04.1';
+					ensure => installed;
 				'libncurses5:amd64':
-					ensure => '5.9+20140118-1ubuntu1';
+					ensure => installed;
 				'libncursesw5:amd64':
-					ensure => '5.9+20140118-1ubuntu1';
+					ensure => installed;
 				'libnet1:amd64':
-					ensure => '1.1.6+dfsg-2ubuntu1';
+					ensure => installed;
 				'libnewt0.52:amd64':
-					ensure => '0.52.15-2ubuntu5';
+					ensure => installed;
 				'libnfnetlink0:amd64':
-					ensure => '1.0.1-2';
+					ensure => installed;
 				'libnih-dbus1:amd64':
-					ensure => '1.0.3-4ubuntu25';
+					ensure => installed;
 				'libnih1:amd64':
-					ensure => '1.0.3-4ubuntu25';
+					ensure => installed;
 				'libnl-3-200:amd64':
-					ensure => '3.2.21-1';
+					ensure => installed;
 				'libnl-genl-3-200:amd64':
-					ensure => '3.2.21-1';
+					ensure => installed;
 				'libnuma1:amd64':
-					ensure => '2.0.9~rc5-1ubuntu2';
+					ensure => installed;
 				'libp11-kit0:amd64':
-					ensure => '0.20.2-2ubuntu2';
+					ensure => installed;
 				'libpam-cap:amd64':
-					ensure => '1:2.24-0ubuntu2';
+					ensure => installed;
 				'libpam-modules:amd64':
-					ensure => '1.1.8-1ubuntu2';
+					ensure => installed;
 				'libpam-systemd:amd64':
-					ensure => '204-5ubuntu20.3';
+					ensure => installed;
 				'libpam0g:amd64':
-					ensure => '1.1.8-1ubuntu2';
+					ensure => installed;
 				'libparted0debian1:amd64':
-					ensure => '2.3-19ubuntu1';
+					ensure => installed;
 				'libpcap0.8:amd64':
-					ensure => '1.5.3-2';
+					ensure => installed;
 				'libpci3:amd64':
-					ensure => '1:3.2.1-1ubuntu5';
+					ensure => installed;
 				'libpcre3:amd64':
-					ensure => '1:8.31-2ubuntu2';
+					ensure => installed;
 				'libpcsclite1:amd64':
-					ensure => '1.8.10-1ubuntu1';
+					ensure => installed;
 				'libpipeline1:amd64':
-					ensure => '1.3.0-1';
+					ensure => installed;
 				'libplymouth2:amd64':
-					ensure => '0.8.8-0ubuntu17';
+					ensure => installed;
 				'libpng12-0:amd64':
-					ensure => '1.2.50-1ubuntu2';
+					ensure => installed;
 				'libpolkit-agent-1-0:amd64':
-					ensure => '0.105-4ubuntu2';
+					ensure => installed;
 				'libpolkit-backend-1-0:amd64':
-					ensure => '0.105-4ubuntu2';
+					ensure => installed;
 				'libpolkit-gobject-1-0:amd64':
-					ensure => '0.105-4ubuntu2';
+					ensure => installed;
 				'libpopt0:amd64':
-					ensure => '1.16-8ubuntu1';
+					ensure => installed;
 				'libprocps3:amd64':
-					ensure => '1:3.3.9-1ubuntu2';
+					ensure => installed;
 				'libpython-stdlib:amd64':
-					ensure => '2.7.5-5ubuntu3';
+					ensure => installed;
 				'libpython2.7-minimal:amd64':
-					ensure => '2.7.6-8';
+					ensure => installed;
 				'libpython2.7-stdlib:amd64':
-					ensure => '2.7.6-8';
+					ensure => installed;
 				'libpython2.7:amd64':
-					ensure => '2.7.6-8';
+					ensure => installed;
 				'libpython3-stdlib:amd64':
-					ensure => '3.4.0-0ubuntu2';
+					ensure => installed;
 				'libpython3.4-minimal:amd64':
-					ensure => '3.4.0-2ubuntu1';
+					ensure => installed;
 				'libpython3.4-stdlib:amd64':
-					ensure => '3.4.0-2ubuntu1';
+					ensure => installed;
 				'libreadline5:amd64':
-					ensure => '5.2+dfsg-2';
+					ensure => installed;
 				'libreadline6:amd64':
-					ensure => '6.3-4ubuntu2';
+					ensure => installed;
 				'libroken18-heimdal:amd64':
-					ensure => '1.6~git20131207+dfsg-1ubuntu1';
+					ensure => installed;
 				'librtmp0:amd64':
-					ensure => '2.4+20121230.gitdf6c518-1';
+					ensure => installed;
 				'libsasl2-2:amd64':
-					ensure => '2.1.25.dfsg1-17build1';
+					ensure => installed;
 				'libsasl2-modules-db:amd64':
-					ensure => '2.1.25.dfsg1-17build1';
+					ensure => installed;
 				'libsasl2-modules:amd64':
-					ensure => '2.1.25.dfsg1-17build1';
+					ensure => installed;
 				'libselinux1:amd64':
-					ensure => '2.2.2-1ubuntu0.1';
+					ensure => installed;
 				'libsemanage1:amd64':
-					ensure => '2.2-1';
+					ensure => installed;
 				'libsepol1:amd64':
-					ensure => '2.2-1';
+					ensure => installed;
 				'libsigc++-2.0-0c2a:amd64':
-					ensure => '2.2.10-0.2ubuntu2';
+					ensure => installed;
 				'libsigsegv2:amd64':
-					ensure => '2.10-2';
+					ensure => installed;
 				'libslang2:amd64':
-					ensure => '2.2.4-15ubuntu1';
+					ensure => installed;
 				'libsmi2ldbl:amd64':
-					ensure => '0.4.8+dfsg2-8ubuntu2';
+					ensure => installed;
 				'libsqlite3-0:amd64':
-					ensure => '3.8.2-1ubuntu2';
+					ensure => installed;
 				'libss2:amd64':
-					ensure => '1.42.9-3ubuntu1';
+					ensure => installed;
 				'libssl1.0.0:amd64':
-					ensure => '1.0.1f-1ubuntu2.4';
+					ensure => installed;
 				'libstdc++6:amd64':
-					ensure => '4.8.2-19ubuntu1';
+					ensure => installed;
 				'libsystemd-daemon0:amd64':
-					ensure => '204-5ubuntu20.3';
+					ensure => installed;
 				'libsystemd-login0:amd64':
-					ensure => '204-5ubuntu20.3';
+					ensure => installed;
 				'libtasn1-6:amd64':
-					ensure => '3.4-3ubuntu0.1';
+					ensure => installed;
 				'libtiff5:amd64':
-					ensure => '4.0.3-7ubuntu0.1';
+					ensure => installed;
 				'libtinfo5:amd64':
-					ensure => '5.9+20140118-1ubuntu1';
+					ensure => installed;
 				'libudev1:amd64':
-					ensure => '204-5ubuntu20.3';
+					ensure => installed;
 				'libusb-0.1-4:amd64':
-					ensure => '2:0.1.12-23.3ubuntu1';
+					ensure => installed;
 				'libusb-1.0-0:amd64':
-					ensure => '2:1.0.17-1ubuntu2';
+					ensure => installed;
 				'libustr-1.0-1:amd64':
-					ensure => '1.0.4-3ubuntu2';
+					ensure => installed;
 				'libuuid1:amd64':
-					ensure => '2.20.1-5.1ubuntu20.1';
+					ensure => installed;
 				'libvpx1:amd64':
-					ensure => '1.3.0-2';
+					ensure => installed;
 				'libwind0-heimdal:amd64':
-					ensure => '1.6~git20131207+dfsg-1ubuntu1';
+					ensure => installed;
 				'libwireshark3:amd64':
-					ensure => '1.10.6-1';
+					ensure => installed;
 				'libwiretap3:amd64':
-					ensure => '1.10.6-1';
+					ensure => installed;
 				'libwrap0:amd64':
-					ensure => '7.6.q-25';
+					ensure => installed;
 				'libwsutil3:amd64':
-					ensure => '1.10.6-1';
+					ensure => installed;
 				'libx11-6:amd64':
-					ensure => '2:1.6.2-1ubuntu2';
+					ensure => installed;
 				'libxau6:amd64':
-					ensure => '1:1.0.8-1';
+					ensure => installed;
 				'libxcb1:amd64':
-					ensure => '1.10-2ubuntu1';
+					ensure => installed;
 				'libxdmcp6:amd64':
-					ensure => '1:1.1.1-1';
+					ensure => installed;
 				'libxext6:amd64':
-					ensure => '2:1.3.2-1';
+					ensure => installed;
 				'libxml2:amd64':
-					ensure => '2.9.1+dfsg1-3ubuntu4.3';
+					ensure => installed;
 				'libxmuu1:amd64':
-					ensure => '2:1.1.1-1';
+					ensure => installed;
 				'libxpm4:amd64':
-					ensure => '1:3.5.10-1';
+					ensure => installed;
 				'linux-headers-3.13.0-24':
-					ensure => '3.13.0-24.47';
+					ensure => installed;
 				'linux-headers-3.13.0-24-generic':
-					ensure => '3.13.0-24.47';
+					ensure => installed;
 				'linux-image-3.13.0-24-generic':
-					ensure => '3.13.0-24.47';
+					ensure => installed;
 				'linux-image-extra-3.13.0-24-generic':
-					ensure => '3.13.0-24.47';
+					ensure => installed;
 				'memtest86+':
-					ensure => '4.20-1.1ubuntu8';
+					ensure => installed;
 				'mysql-server':
-					ensure => '5.5.38-0ubuntu0.14.04.1';
+					ensure => installed;
 				'openssh-server':
-					ensure => '1:6.6p1-2ubuntu2';
+					ensure => installed;
 				'openssh-sftp-server':
-					ensure => '1:6.6p1-2ubuntu2';
+					ensure => installed;
 				'php5':
-					ensure => '5.5.9+dfsg-1ubuntu4.3';
+					ensure => installed;
 				'php5-gd':
-					ensure => '5.5.9+dfsg-1ubuntu4.3';
+					ensure => installed;
 				'php5-mcrypt':
-					ensure => '5.4.6-0ubuntu5';
+					ensure => installed;
 				'php5-mysql':
-					ensure => '5.5.9+dfsg-1ubuntu4.3';
+					ensure => installed;
 				'python3-gdbm:amd64':
-					ensure => '3.4.0-0ubuntu1';
+					ensure => installed;
 				'python3-newt':
-					ensure => '0.52.15-2ubuntu5';
+					ensure => installed;
 				'python3-pycurl':
-					ensure => '7.19.3-0ubuntu3';
+					ensure => installed;
 				'python3-software-properties':
-					ensure => '0.92.37.1';
+					ensure => installed;
 				'run-one':
-					ensure => '1.17-0ubuntu1';
+					ensure => installed;
 				'screen':
-					ensure => '4.1.0~20120320gitdb59704-9';
+					ensure => installed;
 				'software-properties-common':
-					ensure => '0.92.37.1';
+					ensure => installed;
 				'tmux':
-					ensure => '1.8-5';
+					ensure => installed;
 				'unattended-upgrades':
-					ensure => '0.82.1ubuntu2';
+					ensure => installed;
 				'wireless-tools':
-					ensure => '30~pre9-8ubuntu1';
+					ensure => installed;
 				'wpasupplicant':
-					ensure => '2.1-0ubuntu1';
+					ensure => installed;
 				'zlib1g:amd64':
-					ensure => '1:1.2.8.dfsg-1ubuntu1';
+					ensure => installed;
 			}
 		}
 		include apt
